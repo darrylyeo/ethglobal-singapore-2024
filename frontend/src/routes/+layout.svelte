@@ -11,8 +11,10 @@
 
 	// Internal state
 	import type { AppKit, CaipNetwork, Provider } from '@reown/appkit'
+	import { watchAccount, type Config } from '@wagmi/core'
 
 	let appKit: AppKit | undefined = $state()
+	let wagmiConfig: Config | undefined = $state()
 
 	$effect(() => {
 		if(browser) (async () => {
@@ -35,12 +37,16 @@
 
 			const projectId = import.meta.env.VITE_PROJECT_ID
 
+			const wagmiAdapter = new WagmiAdapter({
+				networks,
+				projectId,
+			})
+
+			wagmiConfig = wagmiAdapter.wagmiConfig
+
 			appKit = createAppKit({
 				adapters: [
-					new WagmiAdapter({
-						networks,
-						projectId,
-					}),
+					wagmiAdapter
 				],
 				metadata: {
 					name: 'Html Example',
@@ -54,6 +60,38 @@
 			})
 		})()
 	})
+
+	let provider: Provider | undefined = $state()
+
+	$effect(() => {
+		if(!wagmiConfig) return
+
+		watchAccount(wagmiConfig, {
+			onChange: async account => {
+				console.log('account.connector', account.connector)
+				provider = await account.connector?.getProvider?.() as Provider | undefined
+
+				console.log("provider",provider)
+			},
+		})
+	})
+
+	// $effect(() => {
+	// 	provider = appKit?.getProvider()
+
+	// 	appKit?.subscribeProvider(({ provider: _ }) => {
+	// 		provider = _
+	// 	})
+	// })
+
+
+	import { wrap } from '@oasisprotocol/sapphire-paratime'
+
+	let wrappedProvider = $derived(
+		provider && (
+			wrap(provider)
+		)
+	)
 
 
 	// Styles
