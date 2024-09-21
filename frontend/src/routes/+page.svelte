@@ -1,25 +1,158 @@
 <script lang="ts">
 	// Constants
 	const questions = [
-		{ text: 'Cats or dogs?', options: ['Cats', 'Dogs'] },
-		{ text: 'Morning person or night owl?', options: ['Morning person', 'Night owl'] },
-		{ text: 'Coffee or tea?', options: ['Coffee', 'Tea'] },
-		{ text: 'Summer or winter?', options: ['Summer', 'Winter'] },
-		{ text: 'Introvert or extrovert?', options: ['Introvert', 'Extrovert'] },
-		{ text: 'Mountains or beach?', options: ['Mountains', 'Beach'] },
-		{ text: 'Book or movie?', options: ['Book', 'Movie'] },
-		{ text: 'Sweet or salty snacks?', options: ['Sweet', 'Salty'] },
-		{ text: 'City or countryside?', options: ['City', 'Countryside'] },
-		{ text: 'Phone call or text?', options: ['Phone call', 'Text'] },
-		{ text: 'Chocolate or vanilla?', options: ['Chocolate', 'Vanilla'] },
-		{ text: 'Adventure or relaxation on vacation?', options: ['Adventure', 'Relaxation'] },
-		{ text: 'Plan everything or go with the flow?', options: ['Plan everything', 'Go with the flow'] },
-		{ text: 'Work from home or work in an office?', options: ['Work from home', 'Work in an office'] },
-		{ text: 'Pizza with pineapple or without?', options: ['With pineapple', 'Without pineapple'] },
-		{ text: 'Early riser or sleep in?', options: ['Early riser', 'Sleep in'] },
-		{ text: 'Action movies or comedies?', options: ['Action movies', 'Comedies'] },
-		{ text: 'Spontaneous or a planner?', options: ['Spontaneous', 'Planner'] },
-		{ text: 'Online shopping or in-store shopping?', options: ['Online shopping', 'In-store shopping'] },
+		{ 
+			title: 'Pets', 
+			description: 'Fluffy felines or playful pups?', 
+			options: [
+				{ name: 'Cats', description: 'Team Meow' }, 
+				{ name: 'Dogs', description: 'Team Woof' },
+			],
+		},
+		{ 
+			title: 'Sleep Schedule', 
+			description: 'Rise and shine or night owl vibes?', 
+			options: [
+				{ name: 'Morning', description: 'Early bird catches the worm' }, 
+				{ name: 'Night', description: 'Midnight oil burner' },
+			],
+		},
+		{ 
+			title: 'Hot Drink', 
+			description: 'Java jolt or leaf water?', 
+			options: [
+				{ name: 'Coffee', description: 'Coffee addict' }, 
+				{ name: 'Tea', description: 'Tea enthusiast' },
+			],
+		},
+		{ 
+			title: 'Season', 
+			description: 'Sizzling sun or winter wonderland?', 
+			options: [
+				{ name: 'Summer', description: 'Beach bum' }, 
+				{ name: 'Winter', description: 'Snow bunny' },
+			],
+		},
+		{ 
+			title: 'Personality', 
+			description: 'Party animal or cozy hermit?', 
+			options: [
+				{ name: 'Extrovert', description: 'Social butterfly' }, 
+				{ name: 'Introvert', description: 'Netflix and chill' },
+			],
+		},
+		{ 
+			title: 'Landscape', 
+			description: 'Peak pursuits or sandy toes?', 
+			options: [
+				{ name: 'Mountains', description: 'Mountain goat' }, 
+				{ name: 'Beach', description: 'Beach bum' },
+			],
+		},
+		{ 
+			title: 'Entertainment', 
+			description: 'Page-turner or silver screen?', 
+			options: [
+				{ name: 'Book', description: 'Bookworm' }, 
+				{ name: 'Movie', description: 'Movie buff' },
+			],
+		},
+		{ 
+			title: 'Snack Preference', 
+			description: 'Sugar rush or salt cravings?', 
+			options: [
+				{ name: 'Sweet', description: 'Sweet tooth' }, 
+				{ name: 'Salty', description: 'Savory snacker' },
+			],
+		},
+		{ 
+			title: 'Living Environment', 
+			description: 'Urban jungle or rural retreat?', 
+			options: [
+				{ name: 'City', description: 'City slicker' }, 
+				{ name: 'Countryside', description: 'Country mouse' },
+			],
+		},
+		{ 
+			title: 'Communication', 
+			description: 'Chatty Cathy or text ninja?', 
+			options: [
+				{ name: 'Call', description: 'Ring ring' }, 
+				{ name: 'Text', description: 'Thumb warrior' },
+			],
+		},
+		{ 
+			title: 'Ice Cream Flavor', 
+			description: 'Cocoa dreams or vanilla vibes?', 
+			options: [
+				{ name: 'Chocolate', description: 'Chocoholic' }, 
+				{ name: 'Vanilla', description: 'Vanilla bean' },
+			],
+		},
+		{ 
+			title: 'Vacation Style', 
+			description: 'Thrill-seeker or zen master on vacay?', 
+			options: [
+				{ name: 'Adventure', description: 'Adventure junkie' }, 
+				{ name: 'Relaxation', description: 'Relaxation guru' },
+			],
+		},
+		{ 
+			title: 'Life Planning', 
+			description: 'Spreadsheet wizard or go-with-the-flow guru?', 
+			options: [
+				{ name: 'Planner', description: 'Planning pro' }, 
+				{ name: 'Spontaneous', description: 'Spontaneity champion' },
+			],
+		},
+		{ 
+			title: 'Work Environment', 
+			description: 'Pajama party or office gossip?', 
+			options: [
+				{ name: 'WFH', description: 'Home sweet home office' }, 
+				{ name: 'Office', description: 'Cubicle dweller' },
+			],
+		},
+		{ 
+			title: 'Pizza Topping', 
+			description: 'Pineapple on pizza: yay or nay?', 
+			options: [
+				{ name: 'Pineapple', description: 'Tropical pizza lover' }, 
+				{ name: 'No Pineapple', description: 'Pizza purist' },
+			],
+		},
+		{ 
+			title: 'Morning Routine', 
+			description: 'Chirpy morning lark or sleepy sloth?', 
+			options: [
+				{ name: 'Early Riser', description: 'Up with the sun' }, 
+				{ name: 'Late Sleeper', description: 'Snooze button champion' },
+			],
+		},
+		{ 
+			title: 'Movie Genre', 
+			description: 'Adrenaline rush or belly laughs?', 
+			options: [
+				{ name: 'Action', description: 'Action hero wannabe' }, 
+				{ name: 'Comedy', description: 'Comedy connoisseur' },
+			],
+		},
+		{ 
+			title: 'Decision Making', 
+			description: 'Impulsive adventurer or meticulous mastermind?', 
+			options: [
+				{ name: 'Spontaneous', description: 'Spontaneous spirit' }, 
+				{ name: 'Planner', description: 'Planning perfectionist' },
+			],
+		},
+		{ 
+			title: 'Shopping Preference', 
+			description: 'Couch surfing or mall crawling?', 
+			options: [
+				{ name: 'Online', description: 'Click and ship' }, 
+				{ name: 'In Store', description: 'Retail therapy enthusiast' },
+			],
+		},
 	]
 
 
@@ -39,28 +172,20 @@
 >
 	{#each questions as question, index}
 		<section>
-			<h3>{question.text}</h3>
+			<h3>{question.description}</h3>
 
 			<div class="choices">
-				<label>
-					<input
-						type="radio"
-						name={`question${index}`}
-						value={question.options[0]}
-						bind:group={answers[index]}
-					/>
-					<span>{question.options[0]}</span>
-				</label>
-
-				<label>
-					<input
-						type="radio"
-						name={`question${index}`}
-						value={question.options[1]}
-						bind:group={answers[index]}
-					/>
-					<span>{question.options[1]}</span>
-				</label>
+				{#each question.options as option}
+					<label>
+						<input
+							type="radio"
+							name={`question${index}`}
+							value={option.name}
+							bind:group={answers[index]}
+						/>
+						<span>{option.description}</span>
+					</label>
+				{/each}
 			</div>
 		</section>
 	{/each}
