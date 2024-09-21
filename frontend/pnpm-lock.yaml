@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/londrina-solid':
+    specifier: ^5.1.0
+    version: 5.1.0
   '@reown/appkit':
     specifier: ^1.0.2
     version: 1.0.2(react@18.3.1)
@@ -1859,6 +1862,10 @@ packages:
       '@ethereumjs/rlp': 4.0.1
       ethereum-cryptography: 2.2.1
       micro-ftch: 0.3.1
+    dev: false
+
+  /@fontsource/londrina-solid@5.1.0:
+    resolution: {integrity: sha512-ekaoYZo4PnhMoL2OLp0OPN7XOShqGUu/TkZMKeDNtFlXXqTOqhBXNlHrLO+/PumpCoTGPxt1G065F2e9J+EeuA==}
     dev: false
 
   /@hapi/hoek@9.3.0:
