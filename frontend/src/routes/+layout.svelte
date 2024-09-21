@@ -10,17 +10,28 @@
 
 
 	// Internal state
-	import type { AppKit, CaipNetwork } from '@reown/appkit'
+	import type { AppKit, CaipNetwork, Provider } from '@reown/appkit'
 
 	let appKit: AppKit | undefined = $state()
 
 	$effect(() => {
 		if(browser) (async () => {
-			const { arbitrum, mainnet } = await import('@reown/appkit/networks')
 			const { WagmiAdapter } = await import('@reown/appkit-adapter-wagmi')
 			const { createAppKit } = await import('@reown/appkit')
 
-			const networks: CaipNetwork[] = [mainnet, arbitrum]
+			const networks: CaipNetwork[] = [
+				{
+					id: 'eip155:23294',
+					chainId: 23294,
+					chainNamespace: 'eip155',
+					name: 'Oasis Sapphire',
+					currency: 'ROSE',
+					explorerUrl: 'https://explorer.sapphire.oasis.io',
+					rpcUrl: 'https://sapphire.oasis.io',
+					imageUrl: 'https://avatars.githubusercontent.com/u/52803776',
+					imageId: undefined,
+				},
+			]
 
 			const projectId = import.meta.env.VITE_PROJECT_ID
 
