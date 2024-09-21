@@ -174,6 +174,12 @@
 			.fill(undefined)
 	)
 
+	let isValid = $derived(
+		answers.every(answer => (
+			answer !== undefined
+		))
+	)
+
 
 	// Actions
 	import { createMutation } from '@tanstack/svelte-query'
@@ -231,9 +237,15 @@
 	<footer>
 		<button
 			type="submit"
-			disabled={$mutation.isPending}
+			disabled={!isValid || $mutation.isPending}
 		>
-			{$mutation.isPending ? 'Submitting answers...' : 'Submit answers'}
+			{#if $mutation.isPending}
+				Submitting answers...
+			{:else if !isValid}
+				Answer all the questions
+			{:else}
+				Submit answers
+			{/if}
 		</button>
 	</footer>
 </form>
@@ -330,6 +342,12 @@
 		&:focus {
 			outline: none;
 			box-shadow: 0 0 0 0.1875em rgba(76, 175, 80, 0.5);
+		}
+
+		&:disabled {
+			background-color: #acacac;
+			cursor: not-allowed;
+			opacity: 0.7;
 		}
 	}
 </style>
