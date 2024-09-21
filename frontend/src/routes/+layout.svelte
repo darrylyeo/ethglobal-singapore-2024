@@ -94,23 +94,34 @@
 	)
 
 
+	// TanStack Query
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query'
+
+	const queryClient = new QueryClient()
+
+
 	// Styles
 	import '../global.css'
 	import '../fonts.css'
 </script>
 
 
-<header class="row">
-	<h1>Watering Hole</h1>
+<QueryClientProvider
+	client={queryClient}
+>
+	<header class="row">
+		<h1>Watering Hole</h1>
 
-	<div class="row">
-		<w3m-button></w3m-button>
-		<w3m-network-button></w3m-network-button>
-	</div>
-</header>
+		<div class="row">
+			<w3m-button></w3m-button>
+			<w3m-network-button></w3m-network-button>
+		</div>
+	</header>
 
-
-{@render children()}
+	<main>
+		{@render children()}
+	</main>
+</QueryClientProvider>
 
 
 <style>
