@@ -311,9 +311,11 @@
 >
 	{#each questions as question, index}
 		<section>
-			<h2>{question.title}</h2>
+			<header>
+				<h2>{question.title}.</h2>
 
-			<p>{question.description}</p>
+				<p>{question.description}</p>
+			</header>
 
 			<div class="choices">
 				{#each question.options as option, i}
@@ -324,9 +326,10 @@
 							value={i}
 							bind:group={answers[index]}
 						/>
+
 						<span>
 							<span class="emoji">{option.emoji}</span>
-							{option.description}
+							<span><strong>{option.name}</strong>. {option.description}</span>
 						</span>
 					</label>
 				{/each}
@@ -376,6 +379,13 @@
 
 		&:focus-within {
 			background-color: rgba(237, 241, 245, 0.524);
+		}
+
+		header {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			gap: 0.5em;
 		}
 
 		.choices {
