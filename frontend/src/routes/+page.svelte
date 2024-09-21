@@ -264,6 +264,7 @@
 	// Actions
 	import { createMutation } from '@tanstack/svelte-query'
 	import { writeContract } from '@wagmi/core'
+	import { goto } from '$app/navigation'
 
 	const mutation = createMutation({
 		mutationFn: async (answers: (boolean | undefined)[]) => {
@@ -291,6 +292,8 @@
 		},
 		onSuccess: (data) => {
 			console.log(data)
+
+			goto('/matches')
 		},
 		onError: (error: Error) => {
 			console.error(error.message)
