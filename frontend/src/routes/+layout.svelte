@@ -22,14 +22,25 @@
 			const { createAppKit } = await import('@reown/appkit')
 
 			const networks: CaipNetwork[] = [
+				// {
+				// 	id: 'eip155:23294',
+				// 	chainId: 23294,
+				// 	chainNamespace: 'eip155',
+				// 	name: 'Oasis Sapphire',
+				// 	currency: 'ROSE',
+				// 	explorerUrl: 'https://explorer.sapphire.oasis.io',
+				// 	rpcUrl: 'https://sapphire.oasis.io',
+				// 	imageUrl: 'https://avatars.githubusercontent.com/u/52803776',
+				// 	imageId: undefined,
+				// },
 				{
-					id: 'eip155:23294',
-					chainId: 23294,
+					id: 'eip155:23295',
+					chainId: 23295,
 					chainNamespace: 'eip155',
-					name: 'Oasis Sapphire',
+					name: 'Oasis Sapphire Testnet',
 					currency: 'ROSE',
-					explorerUrl: 'https://explorer.sapphire.oasis.io',
-					rpcUrl: 'https://sapphire.oasis.io',
+					explorerUrl: 'https://testnet.explorer.sapphire.oasis.io',
+					rpcUrl: 'https://testnet.sapphire.oasis.io',
 					imageUrl: 'https://avatars.githubusercontent.com/u/52803776',
 					imageId: undefined,
 				},
