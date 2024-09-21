@@ -1,2 +1,6 @@
 gitConfig:
     committer.email: 46126470+flyingnobita@users.noreply.github.com
+# tasks:
+#   - name: Configure git committer if needed
+#     init: |
+#       git config --global user.email "${GIT_COMMITTER_EMAIL:-$(git config user.email)}"
