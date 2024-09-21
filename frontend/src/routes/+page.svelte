@@ -3,154 +3,154 @@
 	const questions = [
 		{ 
 			title: 'Pets', 
-			description: 'Fluffy felines or playful pups?', 
+			description: 'Do you prefer fluffy felines or playful pups?', 
 			options: [
-				{ name: 'Cats', description: 'Team Meow' }, 
-				{ name: 'Dogs', description: 'Team Woof' },
+				{ name: 'Cats', description: 'I’m on Team Meow.', emoji: '🐱' }, 
+				{ name: 'Dogs', description: 'I’m on Team Woof.', emoji: '🐶' },
 			],
 		},
 		{ 
 			title: 'Sleep Schedule', 
-			description: 'Rise and shine or night owl vibes?', 
+			description: 'Are you a rise and shine person or do you have night owl vibes?', 
 			options: [
-				{ name: 'Morning', description: 'Early bird catches the worm' }, 
-				{ name: 'Night', description: 'Midnight oil burner' },
+				{ name: 'Morning', description: 'Early bird catches the worm!', emoji: '🌅' }, 
+				{ name: 'Night', description: 'Burn the midnight oil!', emoji: '🌙' },
 			],
 		},
 		{ 
 			title: 'Hot Drink', 
-			description: 'Java jolt or leaf water?', 
+			description: 'Do you prefer a java jolt or leaf water?', 
 			options: [
-				{ name: 'Coffee', description: 'Coffee addict' }, 
-				{ name: 'Tea', description: 'Tea enthusiast' },
+				{ name: 'Coffee', description: 'I’m a coffee addict.', emoji: '☕' }, 
+				{ name: 'Tea', description: 'I’m a tea enthusiast.', emoji: '🍵' },
 			],
 		},
 		{ 
 			title: 'Season', 
-			description: 'Sizzling sun or winter wonderland?', 
+			description: 'Do you enjoy the sizzling sun or a winter wonderland?', 
 			options: [
-				{ name: 'Summer', description: 'Beach bum' }, 
-				{ name: 'Winter', description: 'Snow bunny' },
+				{ name: 'Summer', description: 'I’m a beach bum.', emoji: '☀️' }, 
+				{ name: 'Winter', description: 'I’m a snow bunny.', emoji: '❄️' },
 			],
 		},
 		{ 
 			title: 'Personality', 
-			description: 'Party animal or cozy hermit?', 
+			description: 'Are you more of a party animal or a cozy hermit?', 
 			options: [
-				{ name: 'Extrovert', description: 'Social butterfly' }, 
-				{ name: 'Introvert', description: 'Netflix and chill' },
+				{ name: 'Extrovert', description: 'I’m a social butterfly!', emoji: '🦋' }, 
+				{ name: 'Introvert', description: 'I prefer Netflix and chill.', emoji: '🛋️' },
 			],
 		},
 		{ 
 			title: 'Landscape', 
-			description: 'Peak pursuits or sandy toes?', 
+			description: 'Do you prefer peak pursuits or sandy toes?', 
 			options: [
-				{ name: 'Mountains', description: 'Mountain goat' }, 
-				{ name: 'Beach', description: 'Beach bum' },
+				{ name: 'Mountains', description: 'I’m a mountain goat.', emoji: '🏔️' }, 
+				{ name: 'Beach', description: 'I’m a beach bum.', emoji: '🏖️' },
 			],
 		},
 		{ 
 			title: 'Entertainment', 
-			description: 'Page-turner or silver screen?', 
+			description: 'Do you prefer a page-turner or the silver screen?', 
 			options: [
-				{ name: 'Book', description: 'Bookworm' }, 
-				{ name: 'Movie', description: 'Movie buff' },
+				{ name: 'Book', description: 'I’m a bookworm.', emoji: '📚' }, 
+				{ name: 'Movie', description: 'I’m a movie buff.', emoji: '🎬' },
 			],
 		},
 		{ 
 			title: 'Snack Preference', 
-			description: 'Sugar rush or salt cravings?', 
+			description: 'Do you crave a sugar rush or salt cravings?', 
 			options: [
-				{ name: 'Sweet', description: 'Sweet tooth' }, 
-				{ name: 'Salty', description: 'Savory snacker' },
+				{ name: 'Sweet', description: 'I have a sweet tooth.', emoji: '🍭' }, 
+				{ name: 'Salty', description: 'I’m a savory snacker.', emoji: '🥨' },
 			],
 		},
 		{ 
 			title: 'Living Environment', 
-			description: 'Urban jungle or rural retreat?', 
+			description: 'Do you thrive in an urban jungle or prefer a rural retreat?', 
 			options: [
-				{ name: 'City', description: 'City slicker' }, 
-				{ name: 'Countryside', description: 'Country mouse' },
+				{ name: 'City', description: 'I’m a city slicker.', emoji: '🏙️' }, 
+				{ name: 'Countryside', description: 'I’m a country mouse.', emoji: '🏡' },
 			],
 		},
 		{ 
 			title: 'Communication', 
-			description: 'Chatty Cathy or text ninja?', 
+			description: 'Are you a more of phone yapper or a thumb tapper?',
 			options: [
-				{ name: 'Call', description: 'Ring ring' }, 
-				{ name: 'Text', description: 'Thumb warrior' },
+				{ name: 'Call', description: 'Ring ring!', emoji: '📞' }, 
+				{ name: 'Text', description: 'I’m a thumb warrior.', emoji: '📱' },
 			],
 		},
 		{ 
 			title: 'Ice Cream Flavor', 
-			description: 'Cocoa dreams or vanilla vibes?', 
+			description: 'Do you have cocoa dreams or vanilla vibes?', 
 			options: [
-				{ name: 'Chocolate', description: 'Chocoholic' }, 
-				{ name: 'Vanilla', description: 'Vanilla bean' },
+				{ name: 'Chocolate', description: 'I’m a chocoholic.', emoji: '🍫' }, 
+				{ name: 'Vanilla', description: 'I’m a vanilla bean lover.', emoji: '🍦' },
 			],
 		},
 		{ 
 			title: 'Vacation Style', 
-			description: 'Thrill-seeker or zen master on vacay?', 
+			description: 'Are you a thrill-seeker or a zen master on vacation?', 
 			options: [
-				{ name: 'Adventure', description: 'Adventure junkie' }, 
-				{ name: 'Relaxation', description: 'Relaxation guru' },
+				{ name: 'Adventure', description: 'I’m an adventure junkie.', emoji: '🏄‍♂️' }, 
+				{ name: 'Relaxation', description: 'I’m a relaxation guru.', emoji: '🧘‍♀️' },
 			],
 		},
 		{ 
 			title: 'Life Planning', 
-			description: 'Spreadsheet wizard or go-with-the-flow guru?', 
+			description: 'Are you a spreadsheet wizard or a go-with-the-flow guru?', 
 			options: [
-				{ name: 'Planner', description: 'Planning pro' }, 
-				{ name: 'Spontaneous', description: 'Spontaneity champion' },
+				{ name: 'Planner', description: 'I’m a planning pro.', emoji: '📅' }, 
+				{ name: 'Spontaneous', description: 'I’m a spontaneity champion.', emoji: '🎲' },
 			],
 		},
 		{ 
 			title: 'Work Environment', 
-			description: 'Pajama party or office gossip?', 
+			description: 'Do you prefer a pajama party or office gossip?', 
 			options: [
-				{ name: 'WFH', description: 'Home sweet home office' }, 
-				{ name: 'Office', description: 'Cubicle dweller' },
+				{ name: 'WFH', description: 'I have a home sweet home office.', emoji: '🏠' }, 
+				{ name: 'Office', description: 'I’m a cubicle dweller.', emoji: '🏢' },
 			],
 		},
 		{ 
 			title: 'Pizza Topping', 
-			description: 'Pineapple on pizza: yay or nay?', 
+			description: 'What is your stance on pineapple on pizza: yay or nay?', 
 			options: [
-				{ name: 'Pineapple', description: 'Tropical pizza lover' }, 
-				{ name: 'No Pineapple', description: 'Pizza purist' },
+				{ name: 'Pineapple', description: 'I’m a tropical pizza lover.', emoji: '🍍' }, 
+				{ name: 'No Pineapple', description: 'I’m a pizza purist.', emoji: '🍕' },
 			],
 		},
 		{ 
 			title: 'Morning Routine', 
-			description: 'Chirpy morning lark or sleepy sloth?', 
+			description: 'Are you a chirpy morning lark or a sleepy sloth?', 
 			options: [
-				{ name: 'Early Riser', description: 'Up with the sun' }, 
-				{ name: 'Late Sleeper', description: 'Snooze button champion' },
+				{ name: 'Early Riser', description: 'I’m up with the sun!', emoji: '🌞' }, 
+				{ name: 'Late Sleeper', description: 'I’m a snooze button champion.', emoji: '😴' },
 			],
 		},
 		{ 
 			title: 'Movie Genre', 
-			description: 'Adrenaline rush or belly laughs?', 
+			description: 'Do you prefer an adrenaline rush or belly laughs?', 
 			options: [
-				{ name: 'Action', description: 'Action hero wannabe' }, 
-				{ name: 'Comedy', description: 'Comedy connoisseur' },
+				{ name: 'Action', description: 'I’m an action hero wannabe.', emoji: '💥' }, 
+				{ name: 'Comedy', description: 'I’m a comedy connoisseur.', emoji: '😂' },
 			],
 		},
 		{ 
 			title: 'Decision Making', 
-			description: 'Impulsive adventurer or meticulous mastermind?', 
+			description: 'Are you an impulsive adventurer or a meticulous mastermind?', 
 			options: [
-				{ name: 'Spontaneous', description: 'Spontaneous spirit' }, 
-				{ name: 'Planner', description: 'Planning perfectionist' },
+				{ name: 'Spontaneous', description: 'I have a spontaneous spirit.', emoji: '🎭' }, 
+				{ name: 'Planner', description: 'I’m a planning perfectionist.', emoji: '🗓️' },
 			],
 		},
 		{ 
 			title: 'Shopping Preference', 
-			description: 'Couch surfing or mall crawling?', 
+			description: 'Do you prefer couch surfing or mall crawling?', 
 			options: [
-				{ name: 'Online', description: 'Click and ship' }, 
-				{ name: 'In Store', description: 'Retail therapy enthusiast' },
+				{ name: 'Online', description: 'I prefer to click and ship.', emoji: '💻' }, 
+				{ name: 'In Store', description: 'I’m a retail therapy enthusiast.', emoji: '🛍️' },
 			],
 		},
 	]
@@ -172,7 +172,9 @@
 >
 	{#each questions as question, index}
 		<section>
-			<h3>{question.description}</h3>
+			<h3>{question.title}</h3>
+
+			<p>{question.description}</p>
 
 			<div class="choices">
 				{#each question.options as option}
@@ -183,7 +185,7 @@
 							value={option.name}
 							bind:group={answers[index]}
 						/>
-						<span>{option.description}</span>
+						<span><span class="emoji">{option.emoji}</span> {option.description}</span>
 					</label>
 				{/each}
 			</div>
@@ -223,7 +225,7 @@
 		display: flex;
 		align-items: center;
 
-		span {
+		& > span {
 			display: flex;
 			align-items: center;
 			padding: 1rem;
@@ -232,9 +234,13 @@
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 			transition: background-color 0.3s ease;
 			width: 100%;
+
+			.emoji {
+				font-size: 1.5em;
+			}
 		}
 
-		&:hover span {
+		&:hover > span {
 			background-color: #e0e0e0;
 		}
 
