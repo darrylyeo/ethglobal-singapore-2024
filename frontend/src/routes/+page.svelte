@@ -166,8 +166,8 @@
 			],
 		},
 		{ 
-			title: 'Crypto',
-			description: 'Would you rather explore virtual worlds or optimize financial freedom?', 
+			title: 'Crypto Sector',
+			description: 'Would you rather explore virtual worlds or revolutionize finance?', 
 			options: [
 				{ name: 'Metaverse', description: 'I’m ready to dive into virtual realms.', emoji: '🥽' }, 
 				{ name: 'DeFi', description: 'I’m all about financial innovation.', emoji: '💹' },
