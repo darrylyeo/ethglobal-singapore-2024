@@ -134,7 +134,7 @@
 	client={queryClient}
 >
 	<header class="row">
-		<h1>Watering Hole</h1>
+		<h1>🌴 Watering Hole</h1>
 
 		<div class="row">
 			<w3m-button></w3m-button>
