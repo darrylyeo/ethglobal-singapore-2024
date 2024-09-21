@@ -1,4 +1,16 @@
 <script lang="ts">
+	// Types
+	import type { Config } from '@wagmi/core'
+	import type { wrap } from '@oasisprotocol/sapphire-paratime';
+
+
+	// Context
+	import { getContext } from 'svelte'
+
+	const wagmiConfig = getContext<SvelteStore<Config | undefined>>('wagmiConfig')
+	const wrappedProvider = getContext<SvelteStore<ReturnType<typeof wrap> | undefined>>('wrappedProvider')
+
+
 	// Constants
 	const questions = [
 		{ 
@@ -206,7 +218,7 @@
 						/>
 						<span>
 							<span class="emoji">{option.emoji}</span>
-							{option.name}
+							{option.description}
 						</span>
 					</label>
 				{/each}

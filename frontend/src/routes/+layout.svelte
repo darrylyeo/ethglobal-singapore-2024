@@ -94,6 +94,19 @@
 	)
 
 
+	// Context
+	import { setContext } from 'svelte'
+	import { writable } from 'svelte/store'
+
+	const wagmiConfigStore = writable<typeof wagmiConfig>(wagmiConfig)
+	$effect(() => { wagmiConfigStore.set(wagmiConfig) })
+	setContext('wagmiConfig', wagmiConfigStore)
+	
+	const wrappedProviderStore = writable<typeof wrappedProvider>(wrappedProvider)
+	$effect(() => { wrappedProviderStore.set(wrappedProvider) })
+	setContext('wrappedProvider', wrappedProviderStore)
+
+
 	// TanStack Query
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query'
 
