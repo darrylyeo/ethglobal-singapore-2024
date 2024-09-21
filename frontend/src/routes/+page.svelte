@@ -165,6 +165,86 @@
 				{ name: 'In Store', description: 'I’m a retail therapy enthusiast.', emoji: '🛍️' },
 			],
 		},
+		{ 
+			title: 'Crypto',
+			description: 'Would you rather explore virtual worlds or optimize financial freedom?', 
+			options: [
+				{ name: 'Metaverse', description: 'I’m ready to dive into virtual realms.', emoji: '🥽' }, 
+				{ name: 'DeFi', description: 'I’m all about financial innovation.', emoji: '💹' },
+			],
+		},
+		{ 
+			title: 'Blockchain Priorities', 
+			description: 'Do you value decentralization or scalability more?', 
+			options: [
+				{ name: 'Ethereum', description: 'I prioritize decentralization and security.', emoji: '🔷' }, 
+				{ name: 'Solana', description: 'I’m all about speed and scalability.', emoji: '☀️' },
+			],
+		},
+		{ 
+			title: 'NFT Acquisition', 
+			description: 'Do you enjoy the rush of creation or prefer scouting for the perfect piece?', 
+			options: [
+				{ name: 'Mint', description: 'I love being part of the initial creation.', emoji: '🌱' }, 
+				{ name: 'Buy Secondary', description: 'I enjoy finding hidden gems in the market.', emoji: '🔍' },
+			],
+		},
+		{ 
+			title: 'Blockchain Values', 
+			description: 'Do you prefer full transparency or enhanced privacy?', 
+			options: [
+				{ name: 'Public Ledger', description: 'I believe in complete transparency.', emoji: '📖' }, 
+				{ name: 'Privacy Chain', description: 'I value enhanced privacy features.', emoji: '🕵️' },
+			],
+		},
+		{ 
+			title: 'Investment Strategy', 
+			description: 'Are you a long-term believer or a short-term opportunist?', 
+			options: [
+				{ name: 'HODL', description: 'I HODL for the long haul.', emoji: '💎' }, 
+				{ name: 'Flip', description: 'I enjoy quick flips and profits.', emoji: '🔄' },
+			],
+		},
+		{ 
+			title: 'Crypto Earning Preference', 
+			description: 'Do you prefer dynamic earnings or passive rewards?', 
+			options: [
+				{ name: 'Yield Farming', description: 'I like to maximize my returns actively.', emoji: '🚜' }, 
+				{ name: 'Staking', description: 'I prefer steady, passive income.', emoji: '🏦' },
+			],
+		},
+		{ 
+			title: 'NFT Purpose', 
+			description: 'Are you drawn to aesthetic collectibles or functional assets?', 
+			options: [
+				{ name: 'Art', description: 'I appreciate digital art and collectibles.', emoji: '🎨' }, 
+				{ name: 'Utility', description: 'I’m interested in NFTs with practical use cases.', emoji: '🛠️' },
+			],
+		},
+		{ 
+			title: 'Asset Storage', 
+			description: 'Do you prioritize security or convenience?', 
+			options: [
+				{ name: 'Cold Storage', description: 'I prefer maximum security for my assets.', emoji: '🔒' }, 
+				{ name: 'Exchange', description: 'I value easy access and liquidity.', emoji: '💱' },
+			],
+		},
+		{ 
+			title: 'Online Presence', 
+			description: 'Do you prefer to establish a reputation or remain incognito?', 
+			options: [
+				{ name: 'Web3 Identity', description: 'I want to build a recognized presence.', emoji: '🆔' }, 
+				{ name: 'Anonymity', description: 'I prefer to keep my activities private.', emoji: '🎭' },
+			],
+		},
+		{ 
+			title: 'Tokenomics', 
+			description: 'Do you prefer deflationary mechanics or increasing demand for tokens?', 
+			options: [
+				{ name: 'Token Burn', description: 'I like the idea of reducing total supply.', emoji: '🔥' }, 
+				{ name: 'Buyback', description: 'I prefer creating demand through repurchases.', emoji: '🔁' },
+			],
+		},
 	]
 
 
