@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration-line: inherit;
+	text-decoration-thickness: inherit;
+	text-decoration-style: inherit;
+	text-decoration-color: inherit;
+	text-decoration-offset: inherit;
+	min-width: 0;
+	gap: inherit;
+	scroll-behavior: smooth;
+	transition-property: none;
+	transform-style: inherit;
+	transition-duration: inherit;
+	transition-timing-function: inherit;
+}
+
+:root {
+	font-family: sans-serif;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	justify-content: space-between;
+}
