@@ -10,7 +10,7 @@
 
 
 	// Internal state
-	import type { AppKit } from '@reown/appkit'
+	import type { AppKit, CaipNetwork } from '@reown/appkit'
 
 	let appKit: AppKit | undefined = $state()
 
@@ -20,12 +20,16 @@
 			const { WagmiAdapter } = await import('@reown/appkit-adapter-wagmi')
 			const { createAppKit } = await import('@reown/appkit')
 
+			const networks: CaipNetwork[] = [mainnet, arbitrum]
+
+			const projectId = import.meta.env.VITE_PROJECT_ID
+
 			appKit = createAppKit({
 				adapters: [
 					new WagmiAdapter({
-						networks: [mainnet, arbitrum],
-						projectId: import.meta.env.VITE_PROJECT_ID,
-					})
+						networks,
+						projectId,
+					}),
 				],
 				metadata: {
 					name: 'Html Example',
@@ -33,8 +37,8 @@
 					url: 'https://reown.com/appkit',
 					icons: ['https://avatars.githubusercontent.com/u/37784886'],
 				},
-				networks: [mainnet, arbitrum],
-				projectId: import.meta.env.VITE_PROJECT_ID,
+				networks,
+				projectId,
 				themeMode: 'light',
 			})
 		})()
