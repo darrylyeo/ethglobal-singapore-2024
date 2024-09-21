@@ -183,14 +183,31 @@
 
 	// Actions
 	import { createMutation } from '@tanstack/svelte-query'
+	import { writeContract } from '@wagmi/core'
 
 	const mutation = createMutation({
 		mutationFn: async (answers: (boolean | undefined)[]) => {
+			if(!$wagmiConfig) return
+
 			const encodedAnswers = answers.map(Number)
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
-
-			return encodedAnswers
+			return await writeContract(
+				$wagmiConfig,
+				{
+					address: '0xfCde838Bf76322104EC8014b095bF7a82E9592ca',
+					abi: [
+						{
+							inputs: [{ type: 'uint8[]', name: 'response' }],
+							name: 'setUserResponse',
+							outputs: [],
+							stateMutability: 'nonpayable',
+							type: 'function',
+						},
+					],
+					functionName: 'setUserResponse',
+					args: [encodedAnswers],
+				}
+			)
 		},
 		onSuccess: (data) => {
 			console.log(data)
