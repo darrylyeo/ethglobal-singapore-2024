@@ -275,7 +275,7 @@
 			return await writeContract(
 				$wagmiConfig,
 				{
-					address: '0xfCde838Bf76322104EC8014b095bF7a82E9592ca',
+					address: '0x900EF064e66dB0FeC36CDC42f348eBb31F2D4A4d',
 					abi: [
 						{
 							inputs: [{ type: 'uint8[]', name: 'response' }],
