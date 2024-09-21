@@ -4,7 +4,22 @@ pragma solidity ^0.8.0;
 contract Matchmaking {
     mapping(address => uint8[]) private _usersResponse;
 
+    // Array to store unique addresses
+    address[] public uniqueAddresses;
+
+    // Mapping to track whether an address has already been added
+    mapping(address => bool) private addressExists;
+
     function setUserResponse(uint8[] memory response) external {
+        // Check if the caller's address has already been added
+        // In production, this check should not be removed.
+        // require(!addressExists[msg.sender], "Address already stored");
+        if (!addressExists[msg.sender]){
+          // Add the caller's address to the array
+          uniqueAddresses.push(msg.sender);   
+          // Mark the caller's address as added in the mapping
+          addressExists[msg.sender] = true;
+        }
         _usersResponse[msg.sender] = response;
     }
 
@@ -20,6 +35,11 @@ contract Matchmaking {
       }
 
       return score;
+    }
+
+    // Function to retrieve all stored addresses
+    function getUniqueAddresses() external view returns (address[] memory) {
+        return uniqueAddresses;
     }
 }
 
