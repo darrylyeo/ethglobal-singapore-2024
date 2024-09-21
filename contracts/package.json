@@ -1,0 +1,13 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+    "hardhat": "^2.22.11",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "@oasisprotocol/sapphire-hardhat": "^2.19.4",
+    "dotenv": "^16.4.5",
+    "hardhat-contract-sizer": "^2.10.0"
+  }
+}
