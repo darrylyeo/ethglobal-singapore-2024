@@ -157,35 +157,57 @@
 
 
 	// Internal state
-	const answers = $state(
+	const answers: (boolean | undefined)[] = $state(
 		Array(questions.length)
 			.fill(undefined)
 	)
+
+
+	// Actions
+	import { createMutation } from '@tanstack/svelte-query'
+
+	const mutation = createMutation({
+		mutationFn: async (answers: (boolean | undefined)[]) => {
+			const encodedAnswers = answers.map(Number)
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
+
+			return encodedAnswers
+		},
+		onSuccess: (data) => {
+			console.log(data)
+		},
+		onError: (error: Error) => {
+			console.error(error.message)
+		},
+	})
 </script>
 
 
 <form
 	onsubmit={(e) => {
 		e.preventDefault()
-		console.log(answers)
+
+		$mutation.mutate(answers)
 	}}
 >
 	{#each questions as question, index}
 		<section>
-			<h3>{question.title}</h3>
-
+			<h2>{question.title}</h2>
 			<p>{question.description}</p>
-
 			<div class="choices">
 				{#each question.options as option}
 					<label>
 						<input
 							type="radio"
-							name={`question${index}`}
+							name={`question_${index}`}
 							value={option.name}
 							bind:group={answers[index]}
 						/>
-						<span><span class="emoji">{option.emoji}</span> {option.description}</span>
+						<span>
+							<span class="emoji">{option.emoji}</span>
+							{option.name}
+						</span>
 					</label>
 				{/each}
 			</div>
@@ -193,9 +215,26 @@
 	{/each}
 
 	<footer>
-		<button type="submit">Submit</button>
+		<button
+			type="submit"
+			disabled={$mutation.isPending}
+		>
+			{$mutation.isPending ? 'Submitting answers...' : 'Submit answers'}
+		</button>
 	</footer>
 </form>
+
+{#if $mutation.isSuccess}
+	<section>
+		<p>Form submitted successfully!</p>
+	</section>
+{/if}
+
+{#if $mutation.isError}
+	<section>
+		<p>Error: {$mutation.error.message}</p>
+	</section>
+{/if}
 
 
 <style>
