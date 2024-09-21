@@ -206,14 +206,16 @@
 	{#each questions as question, index}
 		<section>
 			<h2>{question.title}</h2>
+
 			<p>{question.description}</p>
+
 			<div class="choices">
-				{#each question.options as option}
+				{#each question.options as option, i}
 					<label>
 						<input
 							type="radio"
 							name={`question_${index}`}
-							value={option.name}
+							value={i}
 							bind:group={answers[index]}
 						/>
 						<span>
