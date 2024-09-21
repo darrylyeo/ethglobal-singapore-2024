@@ -22,6 +22,7 @@
 
 h1, h2, h3, h4 {
 	font-family: 'Londrina Solid', sans-serif;
+	font-weight: 300;
 }
 
 .row {
