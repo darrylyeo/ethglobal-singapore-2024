@@ -27,8 +27,11 @@ contract Matchmaking {
       uint8[] memory senderResponse = _usersResponse[msg.sender];
       uint8[] memory partnerResponse = _usersResponse[stranger];
       uint8 score = 0;
-
-      for (uint i = 0; i < senderResponse.length; i++) {
+      uint8 length = uint8(senderResponse.length);
+      if (length > partnerResponse.length) {
+        length = uint8(partnerResponse.length);
+      }
+      for (uint i = 0; i < length; i++) {
         if(senderResponse[i] == partnerResponse[i]){
           score += 5;
         }
