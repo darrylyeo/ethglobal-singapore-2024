@@ -88,10 +88,16 @@
 
 		{#each scores as { address, score }}
 			<article>
-				<h3>{address}</h3>
+				<img
+					src={`https://api.cloudnouns.com/v1/pfp?text=${address}`}
+					class="avatar"
+				/>
 
 				<div>
-					Compatibility score: <mark class="score">{score}</mark>
+					<h3>{address}</h3>
+					<div>
+						Compatibility score: <mark class="score">{score}</mark>
+					</div>
 				</div>
 			</article>
 		{/each}
@@ -107,13 +113,20 @@
 	}
 
 	article {
-		display: grid;
+		display: flex;
+		align-items: center;
 		padding: 1rem;
 		background-color: #f0f0f0;
 		border-radius: 8px;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		transition: background-color 0.3s ease;
 		width: 100%;
+	}
+
+	.avatar {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
 	}
 
 	.score {
