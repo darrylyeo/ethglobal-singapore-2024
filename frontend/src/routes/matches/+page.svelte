@@ -103,7 +103,13 @@
 				<div>
 					<h3>{address}</h3>
 					<div>
-						Compatibility score: <mark class="score">{score}</mark>
+						Compatibility score:
+						<mark
+							class="score"
+							style={`
+								--score: ${score};
+							`}
+						>{score}%</mark>
 					</div>
 				</div>
 			</article>
@@ -139,5 +145,6 @@
 	.score {
 		font-size: 1.2em;
 		color: #007bff;
+		color: color-mix(in oklch, rgb(255, 91, 37), rgb(22, 209, 22) calc(var(--score) * 1%));
 	}
 </style>
