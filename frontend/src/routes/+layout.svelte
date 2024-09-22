@@ -138,6 +138,7 @@
 			<a href="/"><h1>🌴 Watering Hole</h1></a>
 
 			<nav class="row">
+				<a href="/">Questionnaire</a>
 				<a href="/matches">Matches</a>
 			</nav>
 		</div>

@@ -302,6 +302,10 @@
 </script>
 
 
+<header>
+	<h2>Questionnaire</h2>
+</header>
+
 <form
 	onsubmit={(e) => {
 		e.preventDefault()
@@ -312,7 +316,7 @@
 	{#each questions as question, index}
 		<section>
 			<header>
-				<h2>{question.title}.</h2>
+				<h3>{question.title}.</h3>
 
 				<p>{question.description}</p>
 			</header>
@@ -367,11 +371,16 @@
 
 
 <style>
+	header:not(:is(section header)),
 	section,
 	footer {
 		padding: 1.5rem;
 		display: grid;
 		gap: 1rem;
+	}
+
+	h3 {
+		font-size: 1.3em;
 	}
 
 	section {
