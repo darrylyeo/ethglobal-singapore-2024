@@ -149,7 +149,27 @@
 
 
 <style>
+	:global(body) {
+		background-color: rgb(230, 238, 255);
+	}
+
 	header {
 		padding: 1rem;
+
+		& > :first-child {
+			gap: 1.5em;
+		}
+
+		nav {
+			gap: 1em;
+		}
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: lightblue;
+			}
+		}
 	}
 </style>
