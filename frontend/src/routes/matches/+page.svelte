@@ -88,10 +88,10 @@
 
 		{#each (
 			scores
-				// .map(item => ({
-				// 	...item,
-				// 	// score: Math.floor(Math.random() * 21) * 5 // Random multiple of 5 between 0 and 100
-				// }))
+				.map(item => ({
+					...item,
+					// score: Math.floor(Math.random() * 21) * 5 // Random multiple of 5 between 0 and 100
+				}))
 				.sort((a, b) => b.score - a.score)
 		) as { address, score }}
 			<article>
