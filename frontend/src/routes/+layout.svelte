@@ -134,7 +134,13 @@
 	client={queryClient}
 >
 	<header class="row">
-		<h1>🌴 Watering Hole</h1>
+		<div class="row">
+			<a href="/"><h1>🌴 Watering Hole</h1></a>
+
+			<nav class="row">
+				<a href="/matches">Matches</a>
+			</nav>
+		</div>
 
 		<div class="row">
 			<w3m-network-button></w3m-network-button>
