@@ -9,6 +9,23 @@
 	} = $props()
 
 
+	// Functions
+	const _wrap = (provider) => (
+		new Proxy(
+			wrap(provider),
+			{
+				get(target, prop) {
+					if (prop === 'removeListener') {
+						// return () => {}
+						return Reflect.get(target, prop)
+					}
+					return Reflect.get(target, prop)
+				}
+			}
+		)
+	)
+
+
 	// Internal state
 	import type { AppKit, CaipNetwork, Provider } from '@reown/appkit'
 	import { watchAccount, type Config } from '@wagmi/core'
@@ -18,7 +35,7 @@
 
 	$effect(() => {
 		if(browser && globalThis.ethereum)
-			globalThis.ethereum = wrap(globalThis.ethereum)
+			globalThis.ethereum = _wrap(globalThis.ethereum)
 	})
 
 	$effect(() => {
@@ -60,6 +77,20 @@
 
 			wagmiConfig = wagmiAdapter.wagmiConfig
 
+			if(wagmiConfig._internal.mipd){
+				const originalGetProviders = wagmiConfig._internal.mipd.getProviders
+
+				wagmiConfig._internal.mipd.getProviders = () => {
+					console.log('getProviders')
+					const providers = originalGetProviders()
+
+					return providers.map(providerDetail => ({
+						...providerDetail,
+						provider: _wrap(providerDetail.provider)
+					}))
+				}
+			}
+
 			appKit = createAppKit({
 				adapters: [
 					wagmiAdapter
@@ -84,10 +115,16 @@
 
 		watchAccount(wagmiConfig, {
 			onChange: async account => {
-				console.log('account.connector', account.connector)
-				provider = await account.connector?.getProvider?.() as Provider | undefined
+				// provider = await account.connector?.getProvider?.() as Provider | undefined
 
-				console.log("provider",provider)
+				if(account.connector){
+					const { getProvider } = account.connector
+
+					account.connector.getProvider = async (...args) => {
+						const provider = await getProvider(...args)
+						return _wrap(provider)
+					}
+				}
 			},
 		})
 	})
@@ -105,7 +142,7 @@
 
 	let wrappedProvider = $derived(
 		provider && (
-			wrap(provider)
+			_wrap(provider)
 		)
 	)
 
