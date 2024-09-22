@@ -20,9 +20,13 @@
 	font-family: sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, mark {
 	font-family: 'Londrina Solid', sans-serif;
 	font-weight: 300;
+}
+
+mark {
+	background-color: transparent;
 }
 
 .row {
