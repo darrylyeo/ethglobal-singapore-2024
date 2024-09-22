@@ -84,15 +84,17 @@
 	{:else if $addressesQuery.isError || $scoreQuery.isError}
 		<p>Error: {$addressesQuery.error?.message || $scoreQuery.error?.message}</p>
 	{:else}
-		<h2>Compatibility Scores</h2>
+		<h2>Your Matches</h2>
 
-		<ul>
-			{#each scores as { address, score }}
-				<li>
-					<span>{address}</span>: <span>{score}</span>
-				</li>
-			{/each}
-		</ul>
+		{#each scores as { address, score }}
+			<article>
+				<h3>{address}</h3>
+
+				<div>
+					Compatibility score: <mark class="score">{score}</mark>
+				</div>
+			</article>
+		{/each}
 	{/if}
 </section>
 
@@ -102,5 +104,20 @@
 		padding: 1.5rem;
 		display: grid;
 		gap: 1rem;
+	}
+
+	article {
+		display: grid;
+		padding: 1rem;
+		background-color: #f0f0f0;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.3s ease;
+		width: 100%;
+	}
+
+	.score {
+		font-size: 1.2em;
+		color: #007bff;
 	}
 </style>
