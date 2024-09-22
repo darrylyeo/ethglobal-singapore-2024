@@ -86,7 +86,10 @@
 	{:else}
 		<h2>Your Matches</h2>
 
-		{#each scores as { address, score }}
+		{#each (
+			scores
+				.sort((a, b) => b.score - a.score)
+		) as { address, score }}
 			<article>
 				<img
 					src={`https://api.cloudnouns.com/v1/pfp?text=${address}`}
