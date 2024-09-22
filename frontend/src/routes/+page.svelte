@@ -37,14 +37,14 @@
 				{ name: 'Tea', description: 'I’m a tea enthusiast.', emoji: '🍵' },
 			],
 		},
-		{ 
-			title: 'Season', 
-			description: 'Do you enjoy the sizzling sun or a winter wonderland?', 
-			options: [
-				{ name: 'Summer', description: 'I’m a beach bum.', emoji: '☀️' }, 
-				{ name: 'Winter', description: 'I’m a snow bunny.', emoji: '❄️' },
-			],
-		},
+		// { 
+		// 	title: 'Season', 
+		// 	description: 'Do you enjoy the sizzling sun or a winter wonderland?', 
+		// 	options: [
+		// 		{ name: 'Summer', description: 'I’m a beach bum.', emoji: '☀️' }, 
+		// 		{ name: 'Winter', description: 'I’m a snow bunny.', emoji: '❄️' },
+		// 	],
+		// },
 		{ 
 			title: 'Personality', 
 			description: 'Are you more of a party animal or a cozy hermit?', 
@@ -53,14 +53,14 @@
 				{ name: 'Introvert', description: 'I prefer Netflix and chill.', emoji: '🛋️' },
 			],
 		},
-		{ 
-			title: 'Landscape', 
-			description: 'Do you prefer peak pursuits or sandy toes?', 
-			options: [
-				{ name: 'Mountains', description: 'I’m a mountain goat.', emoji: '🏔️' }, 
-				{ name: 'Beach', description: 'I’m a beach bum.', emoji: '🏖️' },
-			],
-		},
+		// { 
+		// 	title: 'Landscape', 
+		// 	description: 'Do you prefer peak pursuits or sandy toes?', 
+		// 	options: [
+		// 		{ name: 'Mountains', description: 'I’m a mountain goat.', emoji: '🏔️' }, 
+		// 		{ name: 'Beach', description: 'I’m a beach bum.', emoji: '🏖️' },
+		// 	],
+		// },
 		{ 
 			title: 'Entertainment', 
 			description: 'Do you prefer a page-turner or the silver screen?', 
@@ -69,22 +69,22 @@
 				{ name: 'Movie', description: 'I’m a movie buff.', emoji: '🎬' },
 			],
 		},
-		{ 
-			title: 'Snack Preference', 
-			description: 'Do you crave a sugar rush or salt cravings?', 
-			options: [
-				{ name: 'Sweet', description: 'I have a sweet tooth.', emoji: '🍭' }, 
-				{ name: 'Salty', description: 'I’m a savory snacker.', emoji: '🥨' },
-			],
-		},
-		{ 
-			title: 'Living Environment', 
-			description: 'Do you thrive in an urban jungle or prefer a rural retreat?', 
-			options: [
-				{ name: 'City', description: 'I’m a city slicker.', emoji: '🏙️' }, 
-				{ name: 'Countryside', description: 'I’m a country mouse.', emoji: '🏡' },
-			],
-		},
+		// { 
+		// 	title: 'Snack Preference', 
+		// 	description: 'Do you crave a sugar rush or salt cravings?', 
+		// 	options: [
+		// 		{ name: 'Sweet', description: 'I have a sweet tooth.', emoji: '🍭' }, 
+		// 		{ name: 'Salty', description: 'I’m a savory snacker.', emoji: '🥨' },
+		// 	],
+		// },
+		// { 
+		// 	title: 'Living Environment', 
+		// 	description: 'Do you thrive in an urban jungle or prefer a rural retreat?', 
+		// 	options: [
+		// 		{ name: 'City', description: 'I’m a city slicker.', emoji: '🏙️' }, 
+		// 		{ name: 'Countryside', description: 'I’m a country mouse.', emoji: '🏡' },
+		// 	],
+		// },
 		{ 
 			title: 'Communication', 
 			description: 'Are you a more of phone yapper or a thumb tapper?',
@@ -101,14 +101,14 @@
 				{ name: 'Vanilla', description: 'I’m a vanilla bean lover.', emoji: '🍦' },
 			],
 		},
-		{ 
-			title: 'Vacation Style', 
-			description: 'Are you a thrill-seeker or a zen master on vacation?', 
-			options: [
-				{ name: 'Adventure', description: 'I’m an adventure junkie.', emoji: '🏄‍♂️' }, 
-				{ name: 'Relaxation', description: 'I’m a relaxation guru.', emoji: '🧘‍♀️' },
-			],
-		},
+		// { 
+		// 	title: 'Vacation Style', 
+		// 	description: 'Are you a thrill-seeker or a zen master on vacation?', 
+		// 	options: [
+		// 		{ name: 'Adventure', description: 'I’m an adventure junkie.', emoji: '🏄‍♂️' }, 
+		// 		{ name: 'Relaxation', description: 'I’m a relaxation guru.', emoji: '🧘‍♀️' },
+		// 	],
+		// },
 		{ 
 			title: 'Life Planning', 
 			description: 'Are you a spreadsheet wizard or a go-with-the-flow guru?', 
@@ -117,14 +117,14 @@
 				{ name: 'Spontaneous', description: 'I’m a spontaneity champion.', emoji: '🎲' },
 			],
 		},
-		{ 
-			title: 'Work Environment', 
-			description: 'Do you prefer a pajama party or office gossip?', 
-			options: [
-				{ name: 'WFH', description: 'I have a home sweet home office.', emoji: '🏠' }, 
-				{ name: 'Office', description: 'I’m a cubicle dweller.', emoji: '🏢' },
-			],
-		},
+		// { 
+		// 	title: 'Work Environment', 
+		// 	description: 'Do you prefer a pajama party or office gossip?', 
+		// 	options: [
+		// 		{ name: 'WFH', description: 'I have a home sweet home office.', emoji: '🏠' }, 
+		// 		{ name: 'Office', description: 'I’m a cubicle dweller.', emoji: '🏢' },
+		// 	],
+		// },
 		{ 
 			title: 'Pizza Topping', 
 			description: 'What is your stance on pineapple on pizza: yay or nay?', 
@@ -133,14 +133,14 @@
 				{ name: 'No Pineapple', description: 'I’m a pizza purist.', emoji: '🍕' },
 			],
 		},
-		{ 
-			title: 'Morning Routine', 
-			description: 'Are you a chirpy morning lark or a sleepy sloth?', 
-			options: [
-				{ name: 'Early Riser', description: 'I’m up with the sun!', emoji: '🌞' }, 
-				{ name: 'Late Sleeper', description: 'I’m a snooze button champion.', emoji: '😴' },
-			],
-		},
+		// { 
+		// 	title: 'Morning Routine', 
+		// 	description: 'Are you a chirpy morning lark or a sleepy sloth?', 
+		// 	options: [
+		// 		{ name: 'Early Riser', description: 'I’m up with the sun!', emoji: '🌞' }, 
+		// 		{ name: 'Late Sleeper', description: 'I’m a snooze button champion.', emoji: '😴' },
+		// 	],
+		// },
 		{ 
 			title: 'Movie Genre', 
 			description: 'Do you prefer an adrenaline rush or belly laughs?', 
@@ -149,14 +149,14 @@
 				{ name: 'Comedy', description: 'I’m a comedy connoisseur.', emoji: '😂' },
 			],
 		},
-		{ 
-			title: 'Decision Making', 
-			description: 'Are you an impulsive adventurer or a meticulous mastermind?', 
-			options: [
-				{ name: 'Spontaneous', description: 'I have a spontaneous spirit.', emoji: '🎭' }, 
-				{ name: 'Planner', description: 'I’m a planning perfectionist.', emoji: '🗓️' },
-			],
-		},
+		// { 
+		// 	title: 'Decision Making', 
+		// 	description: 'Are you an impulsive adventurer or a meticulous mastermind?', 
+		// 	options: [
+		// 		{ name: 'Spontaneous', description: 'I have a spontaneous spirit.', emoji: '🎭' }, 
+		// 		{ name: 'Planner', description: 'I’m a planning perfectionist.', emoji: '🗓️' },
+		// 	],
+		// },
 		{ 
 			title: 'Shopping Preference', 
 			description: 'Do you prefer couch surfing or mall crawling?', 
@@ -174,39 +174,39 @@
 			],
 		},
 		{ 
-			title: 'Blockchain Priorities', 
-			description: 'Do you value decentralization or scalability more?', 
+			title: 'Blockchains', 
+			description: 'Ethereum or Solana?', 
 			options: [
 				{ name: 'Ethereum', description: 'I prioritize decentralization and security.', emoji: '🔷' }, 
 				{ name: 'Solana', description: 'I’m all about speed and scalability.', emoji: '☀️' },
 			],
 		},
+		// { 
+		// 	title: 'NFT Acquisition', 
+		// 	description: 'Do you enjoy the rush of creation or prefer scouting for the perfect piece?', 
+		// 	options: [
+		// 		{ name: 'Mint', description: 'I love being part of the initial creation.', emoji: '🌱' }, 
+		// 		{ name: 'Buy Secondary', description: 'I enjoy finding hidden gems in the market.', emoji: '🔍' },
+		// 	],
+		// },
 		{ 
-			title: 'NFT Acquisition', 
-			description: 'Do you enjoy the rush of creation or prefer scouting for the perfect piece?', 
-			options: [
-				{ name: 'Mint', description: 'I love being part of the initial creation.', emoji: '🌱' }, 
-				{ name: 'Buy Secondary', description: 'I enjoy finding hidden gems in the market.', emoji: '🔍' },
-			],
-		},
-		{ 
-			title: 'Blockchain Values', 
+			title: 'Blockchain Features', 
 			description: 'Do you prefer full transparency or enhanced privacy?', 
 			options: [
-				{ name: 'Public Ledger', description: 'I believe in complete transparency.', emoji: '📖' }, 
-				{ name: 'Privacy Chain', description: 'I value enhanced privacy features.', emoji: '🕵️' },
+				{ name: 'Public Ledgers', description: 'I believe in complete transparency.', emoji: '📖' }, 
+				{ name: 'Privacy Chains', description: 'I value anonymity.', emoji: '🕵️' },
 			],
 		},
 		{ 
 			title: 'Investment Strategy', 
 			description: 'Are you a long-term believer or a short-term opportunist?', 
 			options: [
-				{ name: 'HODL', description: 'I HODL for the long haul.', emoji: '💎' }, 
+				{ name: 'HODL', description: 'I HODL for the long haul!', emoji: '💎' }, 
 				{ name: 'Flip', description: 'I enjoy quick flips and profits.', emoji: '🔄' },
 			],
 		},
 		{ 
-			title: 'Crypto Earning Preference', 
+			title: 'DeFi', 
 			description: 'Do you prefer dynamic earnings or passive rewards?', 
 			options: [
 				{ name: 'Yield Farming', description: 'I like to maximize my returns actively.', emoji: '🚜' }, 
@@ -214,10 +214,10 @@
 			],
 		},
 		{ 
-			title: 'NFT Purpose', 
+			title: 'NFTs', 
 			description: 'Are you drawn to aesthetic collectibles or functional assets?', 
 			options: [
-				{ name: 'Art', description: 'I appreciate digital art and collectibles.', emoji: '🎨' }, 
+				{ name: 'Art', description: 'I’m in it for the art!', emoji: '🎨' }, 
 				{ name: 'Utility', description: 'I’m interested in NFTs with practical use cases.', emoji: '🛠️' },
 			],
 		},
@@ -233,8 +233,8 @@
 			title: 'Online Presence', 
 			description: 'Do you prefer to establish a reputation or remain incognito?', 
 			options: [
-				{ name: 'Web3 Identity', description: 'I want to build a recognized presence.', emoji: '🆔' }, 
-				{ name: 'Anonymity', description: 'I prefer to keep my activities private.', emoji: '🎭' },
+				{ name: 'Public Identity', description: 'I want to build a recognized presence.', emoji: '🆔' }, 
+				{ name: 'Anon', description: 'I prefer to keep my activities private.', emoji: '🎭' },
 			],
 		},
 		{ 
