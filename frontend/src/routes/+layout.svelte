@@ -17,6 +17,11 @@
 	let wagmiConfig: Config | undefined = $state()
 
 	$effect(() => {
+		if(browser && globalThis.ethereum)
+			globalThis.ethereum = wrap(globalThis.ethereum)
+	})
+
+	$effect(() => {
 		if(browser) (async () => {
 			const { WagmiAdapter } = await import('@reown/appkit-adapter-wagmi')
 			const { createAppKit } = await import('@reown/appkit')
