@@ -3,7 +3,7 @@ use oasis_runtime_sdk::modules::rofl::app::prelude::*;
 /// Address where the oracle contract is deployed.
 // #region oracle-contract-address
 const ORACLE_CONTRACT_ADDRESS: &str = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // TODO: Replace with your contract address.
-// #endregion oracle-contract-address
+                                                                                    // #endregion oracle-contract-address
 
 struct OracleApp;
 
@@ -66,12 +66,14 @@ impl OracleApp {
             let price = rsp
                 .pointer("/price")
                 .ok_or(anyhow::anyhow!("price not available"))?
-                .as_str().unwrap()
+                .as_str()
+                .unwrap()
                 .parse::<f64>()?;
             let price = (price * 1_000_000.0) as u128;
 
             Ok(price)
-        }).await??;
+        })
+        .await??;
 
         // Prepare the oracle contract call.
         let mut tx = self.new_transaction(
